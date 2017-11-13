@@ -1,0 +1,22 @@
+{
+  "name": "online-store",
+  "version": "1.0.0",
+  "description": "Describe online-store here",
+  "private": true,
+  "scripts": {
+    "build": "nwb build-react-app",
+    "clean": "nwb clean-app",
+    "start": "nwb serve-react-app"
+  },
+  "dependencies": {
+    "react": "^16.1.0",
+    "react-dom": "^16.1.0"
+  },
+  "devDependencies": {
+    "nwb": "0.19.x",
+    "nwb-sass": "^0.8.2"
+  },
+  "author": "",
+  "license": "MIT",
+  "repository": ""
+}

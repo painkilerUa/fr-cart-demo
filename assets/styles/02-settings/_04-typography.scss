@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  background: #fff;
+  font: normal 15px/1.2em $dinProRegular;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font: normal 95px/1.2em $dinProBold;
+  margin: 0 0 20px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 100;
+}
+
+h3 {
+  font-size: 13px;
+  text-transform: uppercase;
+
+  &._with-border {
+    padding: 0 0 14px;
+    border-bottom: 2px solid #000;
+  }
+}
+
+h4 {
+  font-size: 20px;
+}
+
+.header-title {
+  font-size: 36px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+p {
+  margin: 0;
+  padding: 0 0 20px;
+}
+
+
+//BUTTONS
+[class^="btn-"],
+[class*=" btn-"] {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 4px 10px;
+  font-size: 12px;
+  transition: all .2s ease-in-out;
+  position: relative;
+  z-index: 1;
+  text-transform: uppercase;
+  font-family: $dinProBold;
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  //modificators
+  &._full { width: 100%; }
+}
+
+.btn-dark {
+  background: #000;
+  color: #fff;
+
+  &:hover {
+    background: #FD0125;
+  }
+}
+
+a {
+  text-decoration: underline;
+  transition: all 0.3s ease;
+
+  &:hover { text-decoration: none; }
+}
+
+.form-control {
+  height: 40px;
+  border: 0;
+  border-bottom: 1px solid #000;
+  padding: 5px 10px;
+  font-size: 15px;
+  width: 100%;
+  transition: all 0.3s ease;
+  background: transparent;
+
+  &:focus { border-bottom-color: #5cb3fd; }
+}
+
+.form-sign-up {
+  .form-control {
+    margin-bottom: 10px;
+  }
+}
