@@ -45,8 +45,6 @@ class App extends Component {
         <main className="page-content">
 
           <div className="page-container">
-            <h2>Wish list</h2>
-
             <ul className="products-list columns">
               <li className="product column _flex3">
                 <div className="top">
