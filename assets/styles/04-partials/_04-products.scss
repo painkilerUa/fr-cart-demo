@@ -1,0 +1,170 @@
+.products-list {
+  margin: 0 -7px 20px;
+
+  .column { padding: 0 7px 20px; }
+}
+
+.product {
+  color: #7E7E7E;
+  position: relative;
+
+  .top {
+    margin: 0 0 20px;
+    position: relative;
+  }
+
+  a { text-decoration: none;}
+
+  &.img-left {
+    display: flex;
+    border-bottom: 1px solid #e3e3e3;
+    padding: 0 0 37px;
+    margin-bottom: 40px;
+
+    .product-price { margin: 22px 0 3px; }
+
+    .img {
+      width: 161px;
+      height: 161px;
+    }
+
+    .top {
+      margin-right: 31px;
+    }
+
+    .description { flex: 1; }
+  }
+
+  .img {
+    height: 175px;
+    background-position: 50% 50%;
+    background-size: cover;
+    display: block;
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+      .btn-dark {
+        bottom: 6px;
+        opacity: 1;
+      }
+    }
+  }
+
+  h3 {
+    margin: 0 0 3px;
+
+    a { 
+      color: #000; 
+      
+      &:hover { color: #FD0125; }
+    }
+  }
+
+  .description {
+    font-size: 14px;
+
+    >div,p { margin-bottom: 4px; }
+
+    .select-holder { margin-bottom: 16px; }
+  }
+
+  .id { color: #aaa; }
+
+  .product-price {
+     margin: 8px 0 1px;
+  }
+  
+  .status {
+    font-size: 13px;
+    color: #FD0125;
+  }
+
+  .btn-dark {
+    left: 30px;
+    right: 30px;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    bottom: -50px;
+    z-index: 10;
+    transition: all 0.3s ease;
+    text-align: center;
+    opacity: 0;
+    background: rgba(0,0,0,0.5);
+  }
+}
+
+.product-subtotal {
+  font-family: $dinProBold;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 13px;
+  
+  .title {
+    color: #7D7D7D;
+    padding: 0 5px 0 0;
+  }
+
+  &._between {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  
+  &._dark {
+    .title { color: #000; }
+  }
+}
+
+.product-price {
+  font-family: $dinProBold;
+  font-size: 16px;
+  color: #000;
+  text-transform: uppercase;
+
+  &._large { font-size: 18px; }
+
+  &._red { color: #FD0125; }
+  
+  &._purpure { color: #428A97; }
+
+  &._large-m {
+    font-size: 30px;
+
+    &._items-right { margin-left: 25px; }
+  }
+}
+
+.product-order-summary {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+
+  strong {
+    position: relative;
+    text-transform: uppercase;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      vertical-align: top;
+      height: 18px;
+      width: 1px;
+      background: #000;
+      margin: 0 8px;
+    }
+  }
+}
+
+.product-delete {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+.product-add-fav {
+  position: absolute;
+  top: 11px;
+  right: 11px;
+}

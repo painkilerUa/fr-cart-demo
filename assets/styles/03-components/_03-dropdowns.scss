@@ -1,0 +1,89 @@
+.dropdown {
+  position: relative;
+  z-index: 10;
+
+  &:hover {
+    z-index: 11;
+
+    .icon-arrow._down {
+      transform: rotate(-225deg);
+      margin-top: -2px;
+    }
+
+    .dropdown-content {
+      top: 100%;
+      right: -15px;
+      opacity: 1;
+      transform: translateY(0);
+      z-index: 100;
+    }
+  }
+
+  &._large {
+
+    .dropdown-title {
+      height: 64px;
+      padding: 0 30px;
+    }
+
+    .dropdown-content { width: 390px; }
+  }
+
+  .dropdown-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-transform: none;
+    padding: 0 35px 1px 15px;
+    height: 35px;
+
+    [class^="sprite-"],
+    [class*=" sprite-"] {
+      margin-top: 0;;
+    }
+
+    .icon-arrow {
+      position: absolute;
+      top: 50%;
+      right: 1px;
+      margin-top: -7px;
+    }
+  }
+
+}
+.dropdown-content {
+  position: absolute;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  background: #fff;
+  padding: 22px 20px 23px 32px;
+  right: -9999px;
+  top: -9999px;
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 0.1s ease, transform 0.1s ease;
+  width: 250px;
+
+  &:after {
+    content: '';
+    top: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #fff;
+    z-index: 1;
+    position: absolute;
+  }
+}
+
+.dropdown-total {
+  @extend .dropdown-content;
+
+  .product-subtotal { padding-top: 5px; }
+}
+
+.dropdown-list {
+  max-height: 200px;
+  overflow: hidden;
+  overflow-y: auto;
+}

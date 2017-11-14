@@ -1,14 +1,7 @@
 .footer-top {
   background: #F4F4F4;
-  padding: 47px 0;
-  box-shadow: 1px 0 5px rgba(0,0,0,0.2) inset;
-}
-
-.copyright {
-  text-align: center;
-  padding: 7px 0;
-  text-transform: uppercase;
-  font-size: 12px;
+  padding: 47px 0 32px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2) inset;
 }
 
 .footer-menu-list {
@@ -22,16 +15,6 @@
   }
 
   li { margin: 0 0 12px; }
-}
-
-.sponsors {
-  display: flex;
-  align-items: center;
-
-  img {
-    display: block;
-    margin-right: 25px;
-  }
 }
 
 .social-list {
@@ -51,12 +34,30 @@
     color: #fff;
     @extend .flex-center;
     
-    &:hover {
-      background: #989696;
-    }
+    &:hover { background: $red; }
 
-    &:before {
-      font-size: 20px;
-    }
+    &:before { font-size: 20px; }
   }
+}
+
+.form-sign-up {
+  .form-control { margin-bottom: 8px; }
+  p { margin: 0 0 12px; }
+}
+
+.footer-brands {
+  display: flex;
+  align-items: center;
+
+  img {
+    display: block;
+    margin-right: 25px;
+  }
+}
+
+.copyright {
+  text-align: center;
+  padding: 12px 0;
+  text-transform: uppercase;
+  font-size: 12px;
 }

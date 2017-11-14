@@ -5,17 +5,105 @@
   vertical-align: middle;
 }
 
-.sprite-logo-en,
-.sprite-logo-jp {
-  width: 40px;
-  height: 40px;
+.sprite-location {
+  width: 13px;
+  height: 18px;
   background-position: -5px -5px;
-  margin: 0 10px 0 0;
 }
 
-.sprite-logo-jp {
-  background-position: -55px -5px;
+.sprite-question {
+  width: 15px;
+  height: 15px;
+  background-position: -28px -5px;
 }
+
+.sprite-company {
+  width: 13px;
+  height: 16px;
+  background-position: -53px -5px;
+}
+
+.sprite-user {
+  width: 13px;
+  height: 15px;
+  background-position: -76px -5px;
+}
+
+.sprite-map {
+  width: 15px;
+  height: 15px;
+  background-position: -99px -5px;
+}
+
+.sprite-search {
+  width: 21px;
+  height: 21px;
+  background-position: -76px -30px;
+}
+
+.sprite-heart {
+  width: 22px;
+  height: 19px;
+  background-position: -5px -61px;
+}
+
+.sprite-cart {
+  width: 24px;
+  height: 20px;
+  background-position: -37px -61px;
+}
+
+.sprite-cross {
+  width: 12px;
+  height: 12px;
+  background-position: -28px -30px;
+}
+
+.sprite-coupon {
+  width: 20px;
+  height: 14px;
+  background-position: -71px -61px;
+}
+
+.sprite-price {
+  width: 16px;
+  height: 16px;
+  background-position: -71px -85px;
+}
+
+.sprite-info {
+  width: 20px;
+  height: 20px;
+  background-position: -124px -5px;
+}
+
+.sprite-heart-plus {
+  width: 20px;
+  height: 18px;
+  background-position: -107px -35px;
+}
+
+.sprite-lock {
+  width: 14px;
+  height: 17px;
+  background-position: -101px -63px;
+}
+
+.sprite-heart-red {
+  width: 20px;
+  height: 18px;
+  background-position: -125px -63px;
+}
+
+.sprite-logo-en,
+.sprite-logo-jp {
+  width: 32px;
+  height: 32px;
+  background-position: -5px -91px;
+  margin-right: 7px;
+}
+
+.sprite-logo-jp { background-position: -97px -91px; }
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
@@ -32,19 +120,31 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-twitter:before { content: "\e900"; }
+.icon-facebook:before { content: "\e901"; }
+.icon-pinterest:before { content: "\e902"; }
+.icon-youtube:before { content: "\e903"; }
+.icon-instagram:before { content: "\e904"; }
+.icon-triangle-down {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 6px 0 6px;
+  border-color: #000 transparent transparent transparent;
+  -webkit-transform: rotate(360deg);
+}
 
-.icon-twitter:before {
-  content: "\e900";
-}
-.icon-facebook:before {
-  content: "\e901";
-}
-.icon-pinterest:before {
-  content: "\e902";
-}
-.icon-youtube:before {
-  content: "\e903";
-}
-.icon-instagram:before {
-  content: "\e904";
+.icon-arrow {
+  width: 10px;
+  height: 10px;
+  border-left: 2px solid #ABABAB;
+  border-bottom: 2px solid #ABABAB;
+  transition: transform 0.3s ease;
+
+  &._down { transform: rotate(-45deg) ; }
+
+  &._left { transform: rotate(-135deg); }
+
+  &._dark { border-color: #000;}
 }

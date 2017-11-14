@@ -14,8 +14,12 @@
   flex-flow: row wrap;
   margin: 0 -15px;
 
+  &._no-margin-bottom {
+    margin-bottom: -39px;
+  }
+
   .column {
-    padding: 0 15px 30px;
+    padding: 0 15px 39px;
 
     &._flex4 { width: 25%; }
 
@@ -31,4 +35,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.flex-center-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-center-y {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-center-x {
+  display: flex;
+  align-items: center;
 }
