@@ -115,7 +115,6 @@ class App extends Component {
                     <a href="" className="btn-transparent product-delete"><span className="sprite-cross"></span></a>
                     <div className="top">
                       <div  className="img" style={{backgroundImage: "url(https://www.uniqlo.com/uk/en/pages/reviews/images/cashmere-crew-women.jpg)"}}>
-                        <a href="" className="btn-dark">add to cart</a>
                       </div>
                       <a href="" className="btn-transparent product-add-fav"><span className="sprite-heart-plus"></span></a>
                     </div>
@@ -146,7 +145,6 @@ class App extends Component {
                   <li className="product img-left">
                     <div className="top">
                       <div  className="img" style={{backgroundImage: "url(https://www.uniqlo.com/uk/en/pages/reviews/images/cashmere-crew-women.jpg)"}}>
-                        <a href="" className="btn-dark">add to cart</a>
                       </div>
                     </div>
                     <div className="description">
@@ -176,7 +174,6 @@ class App extends Component {
                   <li className="product img-left">
                     <div className="top">
                       <div  className="img" style={{backgroundImage: "url(https://www.uniqlo.com/uk/en/pages/reviews/images/cashmere-crew-women.jpg)"}}>
-                        <a href="" className="btn-dark">add to cart</a>
                       </div>
                     </div>
                     <div className="description">
