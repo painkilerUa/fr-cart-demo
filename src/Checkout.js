@@ -67,180 +67,45 @@ class App extends Component {
             {/*header-bottom*/}
             <div className="header-bottom">
               <div className="page-container">
-                <h1 className="header-title">Shopping cart</h1>
+              {/*<h1 className="header-title">Shopping cart</h1>*/}
+              <h1 className="header-title">Checkout</h1>
+              {/*dropdown*/}
+              <div className="dropdown _large">
+                <div className="dropdown-title">
+                  <div className="icon-arrow _down"></div>
+                  <div className="product-order-summary">
+                    <strong>order summary</strong>
+                    <span className="amount">99 items</span>
+                  </div>
+                  <div className="product-price _large-m _items-right">$1249.00</div>
+                </div>
+
+                <div className="dropdown-total">
+                  <dl className="dl-between">
+                    <dt>Product total</dt>
+                    <dd>$39.90</dd>
+                    <dt>Gift free</dt>
+                    <dd>$1.50</dd>
+                    <dt>Postage</dt>
+                    <dd>$4.50</dd>
+                  </dl>
+                  <dl className="dl-between">
+                    <dt>tax</dt>
+                    <dd>$3.19</dd>
+                    <dt>Service charge</dt>
+                    <dd>-$0.09</dd>
+                  </dl>
+                  <div className="product-subtotal _between _dark">
+                    <span className="title">total(tax in):</span> <span className="product-price large">$1249.00</span>
+                  </div>
+                </div>
+              </div>
+              {/*dropdown end*/}
               </div>
             </div>
           </div>
 
         <div className="page-container">
-          <main className="page-content">
-              {/*page-content-inner*/}
-              <div className="page-content-inner">
-
-                <ul className="products-list">
-                  <li className="product img-left">
-                    <a href="" className="btn-transparent product-delete"><span className="sprite-cross"></span></a>
-                    <div className="top">
-                      <div  className="img" style={{backgroundImage: "url(https://www.uniqlo.com/uk/en/pages/reviews/images/cashmere-crew-women.jpg)"}}>
-                      </div>
-                      <a href="" className="btn-transparent product-add-fav"><span className="sprite-heart-plus"></span></a>
-                    </div>
-                    <div className="description">
-                      <h3><a href="">Product description</a></h3>
-                      <div className="id">Product ID: 564354</div>
-                      <div className="color">Color: 09 BLACK</div>
-                      <div className="size">Size: WOMEN M</div>
-                      <p>Pre-sales, New color, New pattern, Online limited products</p>
-                      <div className="status">Limited price</div>
-                      <div className="status">Bulk-buying target</div>
-                      <div className="product-price">$7.90</div>
-
-                      <div className="select-holder small">
-                        <select name="productAmount" className="form-control select">
-                          <option value="">1</option>
-                          <option value="">2</option>
-                          <option value="">3</option>
-                          <option value="">4</option>
-                        </select>
-                      </div>
-
-                      <div className="product-subtotal">
-                        <span className="title">subtotal:</span> <span className="product-price large">$2980.90</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li className="product img-left">
-                    <div className="top">
-                      <div  className="img" style={{backgroundImage: "url(https://www.uniqlo.com/uk/en/pages/reviews/images/cashmere-crew-women.jpg)"}}>
-                      </div>
-                    </div>
-                    <div className="description">
-                      <h3><a href="">Product description</a></h3>
-                      <div className="id">Product ID: 564354</div>
-                      <div className="color">Color: 09 BLACK</div>
-                      <div className="size">Size: WOMEN M</div>
-                      <p>Pre-sales, New color, New pattern, Online limited products</p>
-                      <div className="status">Limited price</div>
-                      <div className="status">Bulk-buying target</div>
-                      <div className="product-price">$7.90</div>
-
-                      <div className="select-holder small">
-                        <select name="productAmount" className="form-control select">
-                          <option value="">1</option>
-                          <option value="">2</option>
-                          <option value="">3</option>
-                          <option value="">4</option>
-                        </select>
-                      </div>
-
-                      <div className="product-subtotal">
-                        <span className="title">subtotal:</span> <span className="product-price large">$2980.90</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li className="product img-left">
-                    <div className="top">
-                      <div  className="img" style={{backgroundImage: "url(https://www.uniqlo.com/uk/en/pages/reviews/images/cashmere-crew-women.jpg)"}}>
-                      </div>
-                    </div>
-                    <div className="description">
-                      <h3><a href="">Product description</a></h3>
-                      <div className="id">Product ID: 564354</div>
-                      <div className="color">Color: 09 BLACK</div>
-                      <div className="size">Size: WOMEN M</div>
-                      <p>Pre-sales, New color, New pattern, Online limited products</p>
-                      <div className="status">Limited price</div>
-                      <div className="status">Bulk-buying target</div>
-                      <div className="product-price">$7.90</div>
-
-                      <div className="select-holder small">
-                        <select name="productAmount" className="form-control select">
-                          <option value="">1</option>
-                          <option value="">2</option>
-                          <option value="">3</option>
-                          <option value="">4</option>
-                        </select>
-                      </div>
-
-                      <div className="product-subtotal">
-                        <span className="title">subtotal:</span> <span className="product-price _large">$2980.90</span>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              {/*page-content-inner end*/}
-              {/*page-sidebar*/}
-              <aside className="page-sidebar">
-                {/*page-sidebar-section*/}
-                <div className="page-sidebar-section">
-                  <div className="sidebar-accordion _open">
-                    <div className="title">
-                      <div className="icon-arrow _left"></div>
-                      <div className="product-order-summary">
-                        <strong>order summary</strong>
-                        <span className="amount">3 item</span>
-                      </div>
-                    </div>
-                    <div className="description">
-                      <div class="product-subtotal">
-                        <span class="title">total(tax in):</span> <span class="product-price _large">$49.00</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                {/*page-sidebar-section end*/}
-
-                {/*page-sidebar-section*/}
-                <div className="page-sidebar-section">
-
-                  <div className="sidebar-accordion">
-                    <div className="title">
-                      <div className="icon-arrow _left"></div>
-                      <p className="paragraph-with-icon">
-                        <span className="sprite-coupon"></span>
-                        <strong>Apply coupon</strong>
-                      </p>
-                    </div>
-                    <div className="description">
-                      <div class="product-subtotal">
-                        <span class="title">subtotal:</span> <span class="product-price _large">$2980.90</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="sidebar-accordion">
-                    <div className="title">
-                      <div className="icon-arrow _left"></div>
-                      <p className="paragraph-with-icon">
-                        <span className="sprite-price"></span>
-                        <strong>Use gift option</strong>
-                      </p>
-                    </div>
-                    <div className="description">
-                      <div class="product-subtotal">
-                        <span class="title">subtotal:</span> <span class="product-price large">$2980.90</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                {/*page-sidebar-section end*/}
-
-                <div className="page-sidebar-section _with-padding">
-                  <div className="sidebar-checkout">
-                    <p>Inventory will be secured for 60 minutes after tapping "to Purches Items".</p>
-                    <a href="" className="btn-red _large _full">Checkout</a>
-                  </div>
-                  <h3>Checkout with</h3>
-                  <a href="" className="btn-with-dark-border _large _full _center">
-                    <img src="../assets/images/brands/05-img.jpg" alt=""/>
-                  </a>
-                  <a href="" className="btn-transparent _large _full">Continue shopping</a>
-                </div>
-                {/*page-sidebar-section end*/}
-              </aside>
-              {/*page-sidebar end*/}
-          </main>
 
           <div className="checkout-method">
             <h2>1.Delivery method</h2>
