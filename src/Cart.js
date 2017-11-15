@@ -1,9 +1,65 @@
 import '../assets/styles/App.scss'
 
 import React, {Component} from 'react'
+import { connect } from 'react-redux'
+import { Link } from 'react-router-dom';
+
+import { fetchProducts } from "./actions/cartActions"
+
+@connect((store) => {
+  return {
+    products: store.cart.products,
+    fetching: store.cart.isLoading,
+    fetched: store.cart.isFatched,
+  }
+})
 
 class App extends Component {
+  componentWillMount () {
+    this.props.dispatch(fetchProducts())
+  }
   render() {
+    console.log('PROPS', this.props)
+
+    const selectedProducts = this.props.products.map((item, i) => {
+
+      const product  = item.data.result.products.items[0]
+
+      return (
+        <li className="product img-left" key={`product_${i}`}>
+          <a href="" className="btn-transparent product-delete"><span className="sprite-cross"></span></a>
+          <div className="top">
+            <div  className="img" style={{backgroundImage: "url(https://www.uniqlo.com/uk/en/pages/reviews/images/cashmere-crew-women.jpg)"}}>
+            </div>
+            <a href="" className="btn-transparent product-add-fav"><span className="sprite-heart-plus"></span></a>
+          </div>
+          <div className="description">
+            <h3><a href="">{product.name}</a></h3>
+            <div className="id">Product ID: {product.id}</div>
+            <div className="color">Color: {product.representative.color_code} BLACK</div>
+            <div className="size">Size: WOMEN M</div>
+            <p>Pre-sales, New color, New pattern, Online limited products</p>
+            <div className="status">Limited price</div>
+            <div className="status">Bulk-buying target</div>
+            <div className="product-price">${product.prices.base}</div>
+
+            <div className="select-holder small">
+              <select name="productAmount" className="form-control select">
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+              </select>
+            </div>
+
+            <div className="product-subtotal">
+              <span className="title">subtotal:</span> <span className="product-price large">$2980.90</span>
+            </div>
+          </div>
+        </li>
+      )
+    })
+
     return <div className="page-holder">
 
         <div className="header">
@@ -78,95 +134,7 @@ class App extends Component {
               <div className="page-content-inner">
 
                 <ul className="products-list">
-                  <li className="product img-left">
-                    <a href="" className="btn-transparent product-delete"><span className="sprite-cross"></span></a>
-                    <div className="top">
-                      <div  className="img" style={{backgroundImage: "url(https://www.uniqlo.com/uk/en/pages/reviews/images/cashmere-crew-women.jpg)"}}>
-                      </div>
-                      <a href="" className="btn-transparent product-add-fav"><span className="sprite-heart-plus"></span></a>
-                    </div>
-                    <div className="description">
-                      <h3><a href="">Product description</a></h3>
-                      <div className="id">Product ID: 564354</div>
-                      <div className="color">Color: 09 BLACK</div>
-                      <div className="size">Size: WOMEN M</div>
-                      <p>Pre-sales, New color, New pattern, Online limited products</p>
-                      <div className="status">Limited price</div>
-                      <div className="status">Bulk-buying target</div>
-                      <div className="product-price">$7.90</div>
-
-                      <div className="select-holder small">
-                        <select name="productAmount" className="form-control select">
-                          <option value="">1</option>
-                          <option value="">2</option>
-                          <option value="">3</option>
-                          <option value="">4</option>
-                        </select>
-                      </div>
-
-                      <div className="product-subtotal">
-                        <span className="title">subtotal:</span> <span className="product-price large">$2980.90</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li className="product img-left">
-                    <div className="top">
-                      <div  className="img" style={{backgroundImage: "url(https://www.uniqlo.com/uk/en/pages/reviews/images/cashmere-crew-women.jpg)"}}>
-                      </div>
-                    </div>
-                    <div className="description">
-                      <h3><a href="">Product description</a></h3>
-                      <div className="id">Product ID: 564354</div>
-                      <div className="color">Color: 09 BLACK</div>
-                      <div className="size">Size: WOMEN M</div>
-                      <p>Pre-sales, New color, New pattern, Online limited products</p>
-                      <div className="status">Limited price</div>
-                      <div className="status">Bulk-buying target</div>
-                      <div className="product-price">$7.90</div>
-
-                      <div className="select-holder small">
-                        <select name="productAmount" className="form-control select">
-                          <option value="">1</option>
-                          <option value="">2</option>
-                          <option value="">3</option>
-                          <option value="">4</option>
-                        </select>
-                      </div>
-
-                      <div className="product-subtotal">
-                        <span className="title">subtotal:</span> <span className="product-price large">$2980.90</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li className="product img-left">
-                    <div className="top">
-                      <div  className="img" style={{backgroundImage: "url(https://www.uniqlo.com/uk/en/pages/reviews/images/cashmere-crew-women.jpg)"}}>
-                      </div>
-                    </div>
-                    <div className="description">
-                      <h3><a href="">Product description</a></h3>
-                      <div className="id">Product ID: 564354</div>
-                      <div className="color">Color: 09 BLACK</div>
-                      <div className="size">Size: WOMEN M</div>
-                      <p>Pre-sales, New color, New pattern, Online limited products</p>
-                      <div className="status">Limited price</div>
-                      <div className="status">Bulk-buying target</div>
-                      <div className="product-price">$7.90</div>
-
-                      <div className="select-holder small">
-                        <select name="productAmount" className="form-control select">
-                          <option value="">1</option>
-                          <option value="">2</option>
-                          <option value="">3</option>
-                          <option value="">4</option>
-                        </select>
-                      </div>
-
-                      <div className="product-subtotal">
-                        <span className="title">subtotal:</span> <span className="product-price _large">$2980.90</span>
-                      </div>
-                    </div>
-                  </li>
+                  {selectedProducts}
                 </ul>
               </div>
               {/*page-content-inner end*/}
@@ -183,8 +151,8 @@ class App extends Component {
                       </div>
                     </div>
                     <div className="description">
-                      <div class="product-subtotal">
-                        <span class="title">total(tax in):</span> <span class="product-price _large">$49.00</span>
+                      <div className="product-subtotal">
+                        <span className="title">total(tax in):</span> <span className="product-price _large">$49.00</span>
                       </div>
                     </div>
                   </div>
@@ -203,8 +171,8 @@ class App extends Component {
                       </p>
                     </div>
                     <div className="description">
-                      <div class="product-subtotal">
-                        <span class="title">subtotal:</span> <span class="product-price _large">$2980.90</span>
+                      <div className="product-subtotal">
+                        <span className="title">subtotal:</span> <span className="product-price _large">$2980.90</span>
                       </div>
                     </div>
                   </div>
@@ -218,8 +186,8 @@ class App extends Component {
                       </p>
                     </div>
                     <div className="description">
-                      <div class="product-subtotal">
-                        <span class="title">subtotal:</span> <span class="product-price large">$2980.90</span>
+                      <div className="product-subtotal">
+                        <span className="title">subtotal:</span> <span className="product-price large">$2980.90</span>
                       </div>
                     </div>
                   </div>
@@ -229,7 +197,7 @@ class App extends Component {
                 <div className="page-sidebar-section _with-padding">
                   <div className="sidebar-checkout">
                     <p>Inventory will be secured for 60 minutes after tapping "to Purches Items".</p>
-                    <a href="" className="btn-red _large _full">Checkout</a>
+                    <Link className="btn-red _large _full" to={'/checkout'}>Checkout</Link>
                   </div>
                   <h3>Checkout with</h3>
                   <a href="" className="btn-with-dark-border _large _full _center">
@@ -241,73 +209,6 @@ class App extends Component {
               </aside>
               {/*page-sidebar end*/}
           </main>
-
-          <div className="checkout-method">
-            <h2>1.Delivery method</h2>
-            <p>Free shipping on oder over $30.00(tax excluded)</p>
-
-            <div className="checkout-method-box">
-              <div className="left">
-                <input type="checkbox" name="shipToHome" id="shipToHome" class="ui-checkbox"/>
-                <label for="shipToHome">Ship to home</label>
-              </div>
-              <div className="right">
-                Shipping cost: <span className="product-price _purpure">$5.00</span>
-              </div>
-            </div>
-
-            <div className="checkout-method-box">
-              <div className="left">
-                <input type="checkbox" name="inStorePickUp" id="inStorePickUp" class="ui-checkbox" />
-                <label for="inStorePickUp">In store pick up</label>
-              </div>
-              <div className="right">
-                Shipping cost: <span className="product-price _purpure">Free</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="checkout-method">
-            <div className="sidebar-accordion _large _open">
-              <div className="title">
-                <div className="icon-arrow _left"></div>
-                <p className="paragraph-with-icon">
-                  <span className="sprite-coupon"></span>
-                  <strong>Apply coupon</strong>
-                </p>
-              </div>
-              <div className="description">
-                <div class="product-subtotal">
-                  <span class="title">subtotal:</span> <span class="product-price _large">$2980.90</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="sidebar-accordion _large">
-              <div className="title">
-                <div className="icon-arrow _left"></div>
-                <p className="paragraph-with-icon">
-                  <span className="sprite-price"></span>
-                  <strong>Use gift option</strong>
-                </p>
-              </div>
-              <div className="description">
-                <div class="product-subtotal">
-                  <span class="title">subtotal:</span> <span class="product-price large">$2980.90</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="checkout-method">
-            <h2>1.Payment method</h2>
-          </div>
-
-          <p className="checkout-info paragraph-with-icon">
-            <span className="sprite-lock"></span>
-            Information entered on this page is pretected by TLS and sent <a href="" className="link-custom">ABOUT TLS</a>
-          </p>
-
         </div>
 
         <div className="footer">

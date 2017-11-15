@@ -113,7 +113,7 @@ class App extends Component {
 
             <div className="checkout-method-box">
               <div className="left">
-                <input type="checkbox" name="shipToHome" id="shipToHome" class="ui-checkbox"/>
+                <input type="checkbox" name="shipToHome" id="shipToHome" className="ui-checkbox"/>
                 <label for="shipToHome">Ship to home</label>
               </div>
               <div className="right">
@@ -123,7 +123,7 @@ class App extends Component {
 
             <div className="checkout-method-box">
               <div className="left">
-                <input type="checkbox" name="inStorePickUp" id="inStorePickUp" class="ui-checkbox" />
+                <input type="checkbox" name="inStorePickUp" id="inStorePickUp" className="ui-checkbox" />
                 <label for="inStorePickUp">In store pick up</label>
               </div>
               <div className="right">
@@ -142,8 +142,8 @@ class App extends Component {
                 </p>
               </div>
               <div className="description">
-                <div class="product-subtotal">
-                  <span class="title">subtotal:</span> <span class="product-price _large">$2980.90</span>
+                <div className="product-subtotal">
+                  <span className="title">subtotal:</span> <span className="product-price _large">$2980.90</span>
                 </div>
               </div>
             </div>
@@ -157,8 +157,8 @@ class App extends Component {
                 </p>
               </div>
               <div className="description">
-                <div class="product-subtotal">
-                  <span class="title">subtotal:</span> <span class="product-price large">$2980.90</span>
+                <div className="product-subtotal">
+                  <span className="title">subtotal:</span> <span className="product-price large">$2980.90</span>
                 </div>
               </div>
             </div>
