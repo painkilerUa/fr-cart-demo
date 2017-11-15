@@ -23,30 +23,6 @@ class App extends Component {
                         <span className="sprite-map"></span>
                         English - Spanish
                       </div>
-                      <div className="dropdown-content">
-                        <ul className="dropdown-list">
-                          <li><a href="">Germany</a></li>
-                          <li><a href="">Germany</a></li>
-                          <li><a href="">Germany</a></li>
-                          <li><a href="">Germany</a></li>
-                          <li><a href="">Germany</a></li>
-                          <li><a href="">Germany</a></li>
-                          <li><a href="">Germany</a></li>
-                          <li><a href="">Germany</a></li>
-                          <li><a href="">Germany</a></li>
-                          <li><a href="">Germany</a></li>
-                          <li><a href="">Germany</a></li>
-                          <li><a href="">Germany</a></li>
-                          <li><a href="">Germany</a></li>
-                          <li><a href="">Germany</a></li>
-                          <li><a href="">Germany</a></li>
-                          <li><a href="">Germany</a></li>
-                          <li><a href="">Germany</a></li>
-                          <li><a href="">Germany</a></li>
-                          <li><a href="">Germany</a></li>
-                          <li><a href="">Germany</a></li>
-                        </ul>
-                      </div>
                     </li>
                   </ul>
                 </nav>
@@ -228,85 +204,6 @@ class App extends Component {
                     </div>
                   </li>
                 </ul>
-
-                <h2>Wish list</h2>
-                <ul className="products-list columns">
-                  <li className="product column _flex3">
-                    <div className="top">
-                      <div  className="img" style={{backgroundImage: "url(https://www.uniqlo.com/uk/en/pages/reviews/images/cashmere-crew-women.jpg)"}}>
-                        <a href="" className="btn-dark">add to cart</a>
-                      </div>
-                    </div>
-                    <h3><a href="">Product description</a></h3>
-                    <div className="description">
-                      <div className="id">Product ID: 564354</div>
-                      <div className="color">Color: 09 BLACK</div>
-                      <div className="size">Size: WOMEN M</div>
-                      <div className="product-price _red _large">$7.90</div>
-                      <div className="status">Limited price</div>
-                    </div>
-                  </li>
-                  <li className="product column _flex3">
-                    <div className="top">
-                      <div  className="img" style={{backgroundImage: "url(https://www.uniqlo.com/uk/en/pages/reviews/images/cashmere-crew-women.jpg)"}}>
-                        <a href="" className="btn-dark">add to cart</a>
-                      </div>
-                    </div>
-                    <h3><a href="">Product description</a></h3>
-                    <div className="description">
-                      <div className="id">Product ID: 564354</div>
-                      <div className="color">Color: 09 BLACK</div>
-                      <div className="size">Size: WOMEN M</div>
-                      <div className="product-price _red _large">$7.90</div>
-                      <div className="status">Limited price</div>
-                    </div>
-                  </li>
-                </ul>
-                <h2>You may also like</h2>
-                <ul className="products-list columns">
-                  <li className="product column _flex3">
-                    <div className="top">
-                      <div  className="img" style={{backgroundImage: "url(https://www.uniqlo.com/uk/en/pages/reviews/images/cashmere-crew-women.jpg)"}}>
-                        <a href="" className="btn-dark">add to cart</a>
-                      </div>
-                    </div>
-                    <h3><a href="">Product description</a></h3>
-                    <div className="description">
-                      <p>Pre-sales, New color, New pattern, Online limited products</p>
-                      <div className="product-price _red _large">$7.90</div>
-                      <div className="status">Limited price</div>
-                      <div className="status">Bulk-buying target</div>
-                    </div>
-                  </li>
-                  <li className="product column _flex3">
-                    <div className="top">
-                      <div  className="img" style={{backgroundImage: "url(https://www.uniqlo.com/uk/en/pages/reviews/images/cashmere-crew-women.jpg)"}}>
-                        <a href="" className="btn-dark">add to cart</a>
-                      </div>
-                    </div>
-                    <h3><a href="">Product description</a></h3>
-                    <div className="description">
-                      <p>Pre-sales, New color, New pattern, Online limited products</p>
-                      <div className="product-price _red _large">$7.90</div>
-                      <div className="status">Limited price</div>
-                      <div className="status">Bulk-buying target</div>
-                    </div>
-                  </li>
-                  <li className="product column _flex3">
-                    <div className="top">
-                      <div  className="img" style={{backgroundImage: "url(https://www.uniqlo.com/uk/en/pages/reviews/images/cashmere-crew-women.jpg)"}}>
-                        <a href="" className="btn-dark">add to cart</a>
-                      </div>
-                    </div>
-                    <h3><a href="">Product description</a></h3>
-                    <div className="description">
-                      <p>Pre-sales, New color, New pattern, Online limited products</p>
-                      <div className="product-price _red _large">$7.90</div>
-                      <div className="status">Limited price</div>
-                      <div className="status">Bulk-buying target</div>
-                    </div>
-                  </li>
-                </ul>
               </div>
               {/*page-content-inner end*/}
               {/*page-sidebar*/}
@@ -379,10 +276,7 @@ class App extends Component {
                 {/*page-sidebar-section end*/}
               </aside>
               {/*page-sidebar end*/}
-
-
           </main>
-
 
           <div className="checkout-method">
             <h2>1.Delivery method</h2>
